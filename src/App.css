@@ -1,0 +1,83 @@
+.App-header {
+  background: linear-gradient(#f69d3c, #3f87a6);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.TxtBox, .ImgBox {
+  height: 200px;
+  width: 200px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  box-sizing: border-box;
+}
+
+.TxtBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  transition: background-color 2s;
+}
+
+.TxtBox:hover {
+  background-color: red;
+  font-family: Arial, sans-serif;
+}
+
+.ImgBox {
+  cursor: wait;
+}
+
+@keyframes imgbox_hover {
+  from {
+    border-width: 2px;
+    border-color: black;
+  } to {
+    border-width: 10px;
+    border-color: yellow;
+  }
+}
+
+.ImgBox:hover {
+  animation: 0.3s forwards imgbox_hover;
+}
+
+.ImgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .App-header div:nth-of-type(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .App-header div:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .App-header div:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .App-header div:nth-of-type(3) {
+    display: none;
+  }
+}
